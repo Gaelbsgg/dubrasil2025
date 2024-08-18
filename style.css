@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f7;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo a {
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a:hover {
+    color: #007aff;
+    border-bottom: 2px solid #007aff;
+}
+
+nav .logo-dubrasil {
+    border-radius: 50%;
+}
+
+
+nav ul li i {
+    color: #fff;
+}
+
+
+.pesquisar {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+nav ul li .pesquisar:hover {
+    padding-left: 10rem;
+}
+
+.pesquisar input[type="text"] {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px; 
+    height: 0.4rem;
+    transition: opacity 0.3s ease, width 0.3s ease, transform 0.3s ease;
+    transform: translateX(100%);
+}
+
+.pesquisar.show input[type="text"] {
+    display: inline-block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.pesquisar i {
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+
+.hero {
+    height: 30vh;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #000;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007aff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.carrosel-container {
+    height: 60vh;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #000;
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-buttons,
+.carousel-thumbnails {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-buttons button,
+.carousel-thumbnails button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.carousel-thumbnails button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.produtos, .servicos, .sobre, .contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+}
+
+
+.produtos h2, .servicos h2, .sobre h2, .contato h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+.produto, .servico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    text-align: center
+}
+
+.produto img, .servico img {
+    width: 100%; 
+    height: auto; 
+    max-height: 500px; 
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.produto h3, .servico h3 {
+    margin: 10px 0;
+}
+
+.produto p, .servico p {
+    margin-bottom: 10px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007aff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+
+.contato form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contato label {
+    display: block;
+    margin-top: 10px;
+}
+
+.contato input, .contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contato button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
