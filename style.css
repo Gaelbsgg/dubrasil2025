@@ -109,82 +109,110 @@ nav ul li .pesquisar:hover {
 
 
 .hero {
-    height: 30vh;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #000;
-}
-
-.hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-.hero h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007aff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-}
-
-.carrosel-container {
-    height: 60vh;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #000;
-}
-
-.carousel {
     position: relative;
-    max-width: 600px;
-    margin: auto;
     overflow: hidden;
 }
 
-.carousel-images {
+.padding {
+    padding: 1rem;
+}
+
+.novidades {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    min-height: 600px;
 }
 
-.carousel-images img {
+
+.slider {
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 0.6s;
+}
+
+.slide img {
     width: 100%;
-    display: block;
+    height: 100%;
 }
 
-.carousel-buttons,
-.carousel-thumbnails {
-    text-align: center;
-    margin-top: 10px;
+/* navigation */
+
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
 }
 
-.carousel-buttons button,
-.carousel-thumbnails button {
-    padding: 10px;
-    margin: 5px;
+.manual-btn {
+    border: 2px solid #00ff08;
+    padding: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: 1s;
 }
 
-.carousel-thumbnails button.active {
-    background-color: #007bff;
-    color: white;
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
 }
+
+.manual-btn:hover {
+    background: #40d3dc;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div {
+    border: 2px solid #40d3dc;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
 
 .produtos, .servicos, .sobre, .contato {
     display: flex;
